@@ -44,8 +44,18 @@ numbers.forEach((number) =>{
             operatorUsed = false;
             currentNo = 0;
         };
+
+        if(current.textContent === '' && event.target.id === '.'){
+            current.textContent += `0`;
+        }
+        if((current.textContent).includes('.') && event.target.id === '.') return;
         current.textContent += event.target.id;
-        currentNo = parseInt(current.textContent);
+
+        if((current.textContent).includes('.')) {
+            currentNo = parseFloat(current.textContent);
+        }else{
+            currentNo = parseInt(current.textContent)
+        };
     });
 });
 
@@ -57,9 +67,9 @@ operatorBtns.forEach((operatorBtn)=>{
         //update totalNo
         if(!operator) {
             operator = event.target.id;
-            totalNo = currentNo
+            totalNo = currentNo;
         }else{
-           totalNo = operate(operator, parseInt(totalNo), parseInt(currentNo));
+           totalNo = operate(operator, totalNo, currentNo);
            operator = event.target.id;
         }
 
@@ -78,7 +88,7 @@ equals.addEventListener('click', (event)=>{
     //Update UpperDisplay
     total.textContent += ` ${currentNo} =`;
     //Call operate function
-    totalNo = operate(operator, parseInt(totalNo), parseInt(currentNo));
+    totalNo = operate(operator, totalNo, currentNo);
     //Update LowerDisplay
     current.textContent = `${totalNo}`;
     //Update Operator
