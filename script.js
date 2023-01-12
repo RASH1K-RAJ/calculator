@@ -104,6 +104,7 @@ clearAll.addEventListener('click', (event) =>{
     total.textContent = ``;
     totalNo = 0;
     currentNo = 0;
+    current.textContent='0';
     operator = ``;
     operatorUsed = false;
     //FIX ME: see what else we need to do

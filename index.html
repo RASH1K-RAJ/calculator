@@ -8,34 +8,51 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div class="header">Calculator</div>
     <div class="calculator">
         <div class="screen">
-            <label id="total" class="display">blank</label>
-            <label id="current" class="display">0</label>
+            <p id="total" class="display"></p>
+            <p id="current" class="display">0</p>
         </div>
 
         <div class="keyboard">
-            <button id="clearAll">AC</button>
-            <button id="clear">C</button>
-            <button id="9" class="number">9</button>
-            <button id="8" class="number"> 8</button>
-            <button id="7" class="number">7</button>
-            <button id="6" class="number">6</button>
-            <button id="5" class="number">5</button>
-            <button id="4" class="number">4</button>
-            <button id="3" class="number">3</button>
-            <button id="2" class="number">2</button>
-            <button id="1" class="number">1</button>
-            <button id="0" class="number">0</button>
-            <button id="." class="number">.</button> <!--Figure this out-->
-            <button id="equals">=</button>
+            <div class="first row">
+                <button id="clearAll" class="key">AC</button>
+                <button id="clear" class="key">C</button>
+                <button id="divide" class="operator key">/</button>
+            </div>
 
-            <button id="divide" class="operator">/</button>
-            <button id="add" class="operator">+</button>
-            <button id="substract" class="operator">-</button>
-            <button id="multiply" class="operator">x</button>
+            <div class="second row">
+                <button id="7" class="number key">7</button>
+                <button id="8" class="number key"> 8</button>
+                <button id="9" class="number key">9</button>
+                <button id="multiply" class="operator key">x</button>
+            </div>
+
+            <div class="third row">
+                <button id="4" class="number key">4</button>
+                <button id="5" class="number key">5</button>
+                <button id="6" class="number key">6</button>
+                <button id="substract" class="operator key">-</button>
+            </div>
+
+            <div class="fourth row">
+                <button id="1" class="number key">1</button>
+                <button id="2" class="number key">2</button>
+                <button id="3" class="number key">3</button>
+                <button id="add" class="operator key">+</button>
+            </div>
+
+            <div class="fifth row">
+                <button id="." class="number key">.</button>
+                <button id="0" class="number key">0</button>
+                <button id="equals" class="key">=</button>
+            </div>
+
         </div>
     </div>  
+
+    <div class="footer">Copywrite 2023 © Rashik Raj</div>
 
 
     <script src="script.js"></script>
