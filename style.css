@@ -48,6 +48,7 @@ body{
     text-align: end;
     align-items:stretch;
     padding: 1rem;
+    overflow-wrap: break-word;
 }
 
 #total{
